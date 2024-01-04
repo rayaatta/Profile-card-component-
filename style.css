@@ -1,0 +1,150 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+### Neutral
+
+Dark gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (name and stats): 18px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+*/
+:root {
+    --dark-cyan:hsl(185, 75%, 39%);
+    --text-color:hsl(227, 10%, 46%);
+    --hd-text-color:hsl(229, 23%, 23%);
+}
+*, *::after, *::before {
+     margin:0;
+     padding:0;
+     box-sizing: border-box;
+     text-align: center;
+     font-weight: 400;
+     font-family: sans-serif;
+     color:var(--text-color);
+}
+body {
+    min-height: 100vh;
+    background-color:var(--dark-cyan);
+    background-image:url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-position:bottom 30vh right 50vw, top 50vh left 40vw;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    max-width:min(90%, 21rem);
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.grid {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin-block-end: 1rem;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.bg-holder {
+    grid-row: 1/4;
+    grid-column: 1/4;
+    display: flex;
+} 
+.bg-holder > img {
+    display: flex;
+    border-radius: 1rem 1rem 0 0;
+}
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 3/5;
+    grid-column:2/3 ;
+    z-index: 2;
+}
+figure > img { 
+    border-radius: 50%;
+    border: 2px solid #fff;   
+}
+.about-victor {
+    grid-row:4/7;
+    grid-column:1/4;
+    display:grid;
+    grid-template-rows:1fr 1fr ;
+    font-size: 1.125rem;
+    
+}
+.about-victor > div {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+}
+.about-victor div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: 1rem;
+}
+h1, h2 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color:var(--hd-text-color);
+}
+div span {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+p {
+    font-weight: 400;
+    font-size: .9rem;
+}
+.info {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    padding-block: 1rem;
+}
+.info h2 {
+    font-size: 1.125rem;
+}
+.info p {
+    font-size: .7rem;
+}
+footer {
+    position: absolute;
+    bottom:0;
+}
+@media screen and (min-width:700px) {
+    body {
+        background-position: bottom 30vh right 50vw, top 50vh left 50vw;
+    }
+}
+
